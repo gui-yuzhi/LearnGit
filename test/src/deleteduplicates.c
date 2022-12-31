@@ -43,7 +43,7 @@ ListNode * DeleteDuplicates(ListNode *listNode)
 
 int main()
 {
-    int nums[10] = { 1, 1, 1, 2, 2, 2, 3, 3, 3, 3};
+    int nums[12] = { 1, 1, 1, 2, 2, 2, 3, 3, 3, 3， 4， 4};
     ListNode *listNode = CreateListNode(nums[0]);
     ListNode *tempList = listNode;
     for (int i = 1; i < sizeof(nums) / sizeof(int); i++) {
