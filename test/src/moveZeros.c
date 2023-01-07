@@ -13,28 +13,29 @@ void PrintArrayElement(int *nums, int numSize)
 	}
 }
 
-int RemoveElement(int *nums, int numSize, int val)
+void MoveZeros(int *nums, int numSize)
 {
 	if (numSize == 0) {
-		return 0;
+		return;
 	}
 	int fast = 0;
 	int slow = 0;
 	while (fast < numSize) {
-		if (nums[fast] != val) {
+		if (nums[fast] != 0) {
 			nums[slow++] = nums[fast];
 		}
 		fast++;
 	}
-	PrintArrayElement(nums, numSize);
-	return slow;
+    for (int i = slow; i < numSize; i++) {
+        nums[i] = 0;
+    }
 }
 
 int main()
 {
-	int nums[10] = { 1, 1, 1, 2, 2, 2, 3, 3, 3, 3};
+	int nums[10] = { 1, 0, 1, 0, 2, 0, 3, 0, 3, 0};
 	int numSize = sizeof(nums) / sizeof(int);
-    int val = 3;
-	printf("result is [%d].\n", RemoveElement(nums, numSize, val));
+    MoveZeros(nums, numSize);
+    PrintArrayElement(nums, numSize);
 	return 0;
 }
