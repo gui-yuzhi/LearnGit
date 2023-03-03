@@ -27,7 +27,7 @@ int Sum(int type, int arg, ...)
 int main()
 {
     int sum;
-    sum = Sum(1, 6, 1, 2, 3, 4, 5, 6);
+    sum = Sum(0, 6, 1, 2, 3, 4, 5, 6);
     printf("sum is [%d].\n", sum);
     return 0;
 }
