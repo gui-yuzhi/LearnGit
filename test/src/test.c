@@ -31,3 +31,14 @@ int main()
     printf("sum is [%d].\n", sum);
     return 0;
 }
+
+#define RESERT_NUM 4
+#define BI_EVENT_PARAM_NUM 8
+typedef struct {
+    char *sn;
+    char *prodId;
+    int proType;
+    int failCase;
+    int reverse[RESERT_NUM];
+} BiEventParam;
+
