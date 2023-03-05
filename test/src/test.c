@@ -24,6 +24,7 @@ int Sum(int type, int arg, ...)
     return result;
 }
 
+/* test begin */
 int main()
 {
     int sum;
